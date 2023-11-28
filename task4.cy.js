@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('task4', () => {
-    it('click', () => {
+    it('task4', () => {
         cy.visit("https://magento.softwaretestingboard.com/");
         cy.get(".field.search .control :eq(0)").clear().type("shirt"+"{enter}");
         cy.get(".products.list li :eq(0)").click();
