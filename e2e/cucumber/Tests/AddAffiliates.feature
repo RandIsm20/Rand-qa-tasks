@@ -9,8 +9,8 @@ Feature: Add new affiliates
 
  Scenario: Verify that the user can add new affiliates
         Given The user navigated to nopCommerce website
-        When  The user choose affiliates from promotions
-        And   The user click on add new button
+        Then  The user choose affiliates from promotions
+        When   The user click on add new button
         And   The user check active 
         And   The user enter the first name 
         And   The user enter the last name 
@@ -23,5 +23,5 @@ Feature: Add new affiliates
         And   The user enter the phone number
         And   The user enter the Fax number
         And   The user enter the admin comment
-        And   The user click on save button for new affiliate 
+        When   The user click on save button for new affiliate 
         Then  The new affiliate added successfully
