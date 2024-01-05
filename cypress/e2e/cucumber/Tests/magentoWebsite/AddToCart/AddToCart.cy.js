@@ -1,14 +1,19 @@
 import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
 import AddToCartAssertions from "../../../../../pageObjects/AddToCartPage/assertions.cy";
 import AddToCartActions from "../../../../../pageObjects/AddToCartPage/actions.cy";
+import sharedPage from "../../../../../shared/actions.cy";
+
 
 
 const AddToCartPageAssertions = new AddToCartAssertions();
 const AddToCartPageActions = new AddToCartActions();
+const sharedPageActions = new sharedPage
+const url = "https://magento.softwaretestingboard.com/";
 
 Given("The user navigated to magento website",()=>{
-  AddToCartPageActions.openMagentoWebsite();
-});
+sharedPageActions.openMagentoWebsite(url);
+}
+);
 
 When("The user search for shirt product",()=>{
   AddToCartPageActions.searchForShirtProduct();

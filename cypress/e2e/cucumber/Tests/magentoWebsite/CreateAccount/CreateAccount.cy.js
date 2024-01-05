@@ -1,10 +1,13 @@
 import {   Given, Then, When  } from "cypress-cucumber-preprocessor/steps";
 import createAccountActions from "../../../../../pageObjects/createAccountPage/actions.cy";
 import createAccountAssertions from "../../../../../pageObjects/createAccountPage/assertions.cy";
+import sharedPage from "../../../../../shared/actions.cy";
 
 
 const creatAccountPageAction = new createAccountActions();
 const creatAccountPageAssertion = new createAccountAssertions();
+const sharedPageActions = new sharedPage();
+const url = "https://magento.softwaretestingboard.com/customer/account/create/";
 
 
 
@@ -12,7 +15,7 @@ const creatAccountPageAssertion = new createAccountAssertions();
 
 Given("The user navigated to create account page",()=>{
    
-    creatAccountPageAction.openMagentoWebsite(); 
+    sharedPageActions.openMagentoWebsite(url); 
 });
 
 

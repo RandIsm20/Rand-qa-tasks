@@ -1,10 +1,5 @@
 class AddToCartActions {
   
-  openMagentoWebsite() {
-    cy.visit("https://magento.softwaretestingboard.com/");
-    return this;
-  }
-
   searchForShirtProduct() {
     cy.get("#search").type("shirt {enter}");
     return this;
@@ -27,7 +22,7 @@ class AddToCartActions {
   }
 
   clickOnAddToCartButton(){
-    cy.wait(500);
+    cy.wait(1000);
     cy.get("#product-addtocart-button").click();
     return this;
   }
